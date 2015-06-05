@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="AutoLayoutMaterialCenteringSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS" userLabel="ParentView">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="300x300" translatesAutoresizingMaskIntoConstraints="NO" id="b7O-Ke-Ysz">
+                                <rect key="frame" x="150" y="150" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="b7O-Ke-Ysz" secondAttribute="height" multiplier="1:1" id="cBX-54-Va9"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gVS-6A-rrV" userLabel="Child View">
+                                <rect key="frame" x="225" y="225" width="150" height="150"/>
+                                <color key="backgroundColor" red="1" green="0.047058823530000002" blue="0.19215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="gVS-6A-rrV" secondAttribute="height" multiplier="1:1" id="lVs-Pe-wkn"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="b7O-Ke-Ysz" firstAttribute="centerY" secondItem="gVS-6A-rrV" secondAttribute="centerY" id="6LP-sq-SAK"/>
+                            <constraint firstAttribute="centerX" secondItem="b7O-Ke-Ysz" secondAttribute="centerX" id="WaA-1r-7nP"/>
+                            <constraint firstAttribute="centerY" secondItem="b7O-Ke-Ysz" secondAttribute="centerY" id="ekr-YD-TD4"/>
+                            <constraint firstItem="b7O-Ke-Ysz" firstAttribute="centerX" secondItem="gVS-6A-rrV" secondAttribute="centerX" id="nYZ-kw-LN9"/>
+                            <constraint firstItem="b7O-Ke-Ysz" firstAttribute="width" secondItem="gVS-6A-rrV" secondAttribute="width" multiplier="2" id="rIf-bm-qDe"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="300x300" width="300" height="300"/>
+    </resources>
+</document>
